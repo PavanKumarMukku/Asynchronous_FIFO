@@ -39,7 +39,7 @@ module fifo_wptr #(
     assign wbin_nxt  = (w_bin) + (w_inc & ~full);
     assign wgray_nxt = (wbin_nxt >> 1) ^ wbin_nxt;
 
-    // Full when MSBs match wrap-around conditions (top two bits inverted, remaining match)
+    // Full when MSBs match wrap-around conditions (top two bits inverted, remaining match) in gray code
     assign is_full   = (wgray_nxt == {~(wq2_rptr[ADDR_WIDTH : ADDR_WIDTH-1]), wq2_rptr[ADDR_WIDTH-2 : 0]});
 
     always_ff @(posedge w_clk or posedge w_rst) begin
