@@ -11,7 +11,10 @@ module fifo_rptr #(
 );
     /*
     This module handles read pointer logic, binary to gray code conversion and
-    generates empty flag by comparing local read pointer with synchronized write pointer
+    generates empty flag by comparing local read pointer with synchronized write pointer.
+
+    - Empty flag is generated when Gray-coded read pointer matches synchronized write pointer
+    - Generates the read address for memory accessa and updates the read pointer on successful read operations.
     */
     logic[ADDR_WIDTH : 0] r_bin;
     wire [ADDR_WIDTH : 0] rbin_nxt;
