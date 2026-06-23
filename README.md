@@ -108,6 +108,3 @@ vvp a.out
 ## Author
 
 **Pavan Kumar Mukku**
-
-Electrical Engineering  
-Indian Institute of Technology Madras
