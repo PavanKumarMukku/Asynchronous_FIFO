@@ -19,6 +19,12 @@ module async_fifo #(
     /*
     The top module that ties all the submodules of the ASYNCHRONOUS FIFO together
     using combinational structure interconnects.
+
+    Integrates these modules :
+        - Dual-port FIFO memeory
+        - Write pointer Handler
+        - Read Pointer Handler
+        - Synchronizer
     */
     
     // Internal routing nets
