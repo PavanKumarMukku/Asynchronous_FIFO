@@ -10,13 +10,16 @@ A parameterizable ***Asynchronous FIFO(First In First Out)*** implemented in ***
 - Asynchronous read memory and synchronous write memory
 
 ## Project Structure
-├── async_fifo.sv      # Top-level FIFO module 
-├── fifo_mem.sv        # FIFO memory 
-├── fifo_rptr.sv       # Read pointer & empty logic
-├── fifo_wptr.sv       # Write pointer & full logic
-├── fifo_sync.sv       # Two-stage synchronizer 
-├── tb.sv              # Testbench
+```text
+.
+├── async_fifo.sv
+├── fifo_mem.sv
+├── fifo_rptr.sv
+├── fifo_sync.sv
+├── fifo_wptr.sv
+├── tb.sv
 └── README.md
+```
 
 ## Module Description
 ### 1. async_fifo
