@@ -8,6 +8,7 @@ A parameterizable ***Asynchronous FIFO(First In First Out)*** implemented in ***
 - Two Flip-Flop synchronization for CDC(Clock Domain Crossing)
 - Full and Empty Flag generation by write point handler block and read point handler block respectively
 - Asynchronous read memory and synchronous write memory
+- read/ write ponters has 1 bit more than address bits to get full or empty flags to eliminate wrap around after memory gets filled.
 
 ## Project Structure
 ```text
@@ -58,8 +59,8 @@ The FIFO uses:
 Since only one Gray-code bit changes at a time, the probability of sampling multiple changing bits simultaneously is significantly reduced 
 
 ## Paramters
-DATA_WIDTH
-ADDR_WIDTH
+-DATA_WIDTH
+-ADDR_WIDTH
 
 
 ## FIFO DEPTH
