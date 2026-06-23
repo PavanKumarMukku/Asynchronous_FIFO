@@ -10,11 +10,11 @@ A parameterizable ***Asynchronous FIFO(First In First Out)*** implemented in ***
 -> Asynchronous read memory and synchronous write memory
 
 ## Project Structure
-├──> async_fifo.sv      # Top-level FIFO module
-├──> fifo_mem.sv        # FIFO memory
-├──> fifo_rptr.sv       # Read pointer & empty logic
-├──> fifo_wptr.sv       # Write pointer & full logic
-├──> fifo_sync.sv       # Two-stage synchronizer
+├──> async_fifo.sv      # Top-level FIFO module ..
+├──> fifo_mem.sv        # FIFO memory ..
+├──> fifo_rptr.sv       # Read pointer & empty logic ..
+├──> fifo_wptr.sv       # Write pointer & full logic ..
+├──> fifo_sync.sv       # Two-stage synchronizer ..
 ├──> tb.sv   # Testbench
 └──> README.md
 
@@ -27,47 +27,41 @@ This is a top level module that instatiates all other modules and ties them togo
 ---
 
 ### 2. fifo_mem
-This module represents memory array of FIFO
--> Synchronous write
--> Asynchronous read
----
+This module represents memory array of FIFO ..
+-> Synchronous write .. 
+-> Asynchronous read ..
 
 ### 3. fifo_rptr
-Implementation of Read Pointer Handler
--> Gray-code, Binary conversion
--> Empty Flag
--> Read address
----
+Implementation of Read Pointer Handler ..
+-> Gray-code, Binary conversion ..
+-> Empty Flag ..
+-> Read address ..
 
 ### 4. fifo_wptr
-Implementation of Write Pointer Handler
--> Gray-code, Binary conversion
--> Full Flag
--> Write address
----
+Implementation of Write Pointer Handler ..
+-> Gray-code, Binary conversion ..
+-> Full Flag ..
+-> Write address ..
 
 ### 5. fifo_sync
-Two-stage flip-flop synchronizer.
--> Safely transfers Gray-coded pointers between different clock domains while minimizing metastability.
----
+Two-stage flip-flop synchronizer..
+-> Safely transfers Gray-coded pointers between different clock domains while minimizing metastability..
 
 
 ## Clock Domain Crossing
 The FIFO uses:
--> Binary counters for memory addressing
--> Gray-code pointers for synchronization
--> Two-stage synchronizers for pointer transfer
-Since only one Gray-code bit changes at a time, the probability of sampling multiple changing bits simultaneously is significantly reduced.
----
+-> Binary counters for memory addressing ..
+-> Gray-code pointers for synchronization ..
+-> Two-stage synchronizers for pointer transfer ..
+Since only one Gray-code bit changes at a time, the probability of sampling multiple changing bits simultaneously is significantly reduced ..
 
 ## Paramters
 DATA_WIDTH
 ADDR_WIDTH
----
+
 
 ## FIFO DEPTH
 DEPTH = 2^(ADDR_WIDTH)
----
 
 
 ## How It Works
@@ -89,7 +83,6 @@ DEPTH = 2^(ADDR_WIDTH)
    - Binary read pointer increments.
    - Gray pointer updates.
 3. Gray pointer is synchronized into the write clock domain.
----
 
 ### Simulation
 Example using Icarus Verilog:
@@ -100,14 +93,14 @@ vvp a.out
 ---
 
 ## Applications
--> Clock Domain Crossing (CDC)
--> UART
--> SPI
--> AXI Stream
--> Network interfaces
--> DSP pipelines
--> FPGA communication
----
+-> Clock Domain Crossing (CDC) ..
+-> UART ..
+-> SPI ..
+-> AXI Stream ..
+-> Network interfaces ..
+-> DSP pipelines..
+-> FPGA communication ..
+
 
 ## Author
 
