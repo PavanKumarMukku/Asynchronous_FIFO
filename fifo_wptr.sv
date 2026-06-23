@@ -12,6 +12,9 @@ module fifo_wptr #(
     /*
     This module handles write pointer logic, binary to gray code conversion and
     generates full flag by comparing local write pointer with synchronized read pointer
+
+    - Full flag is generated when Gray-coded read pointer matches synchronized write pointer
+    - Generates the write address for memory access and updates the read pointer on successful read operations.
     */
 
     logic[ADDR_WIDTH : 0] w_bin;
