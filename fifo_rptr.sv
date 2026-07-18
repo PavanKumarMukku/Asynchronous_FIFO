@@ -22,8 +22,8 @@ module fifo_rptr #(
 
     always_ff @(posedge r_clk or posedge r_rst) begin
         if(r_rst) begin
-            r_bin <= 0;
-            rptr  <= 0;
+            r_bin <= '0;
+            rptr  <= '0;
         end
         else begin
             r_bin <= rbin_nxt;
