@@ -104,6 +104,8 @@ vvp a.out
 - DSP pipelines
 - FPGA communication 
 
+<img width="1024" height="578" alt="image" src="https://github.com/user-attachments/assets/b2a53ea7-6c94-4e23-b7f0-7ec53a08dbd4" />
+
 
 ## Author
 
