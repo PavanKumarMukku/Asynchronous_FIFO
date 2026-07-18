@@ -18,7 +18,7 @@ module fifo_mem #(
 
     // depth = 2^(addr_width)
     localparam DEPTH = 1 << ADDR_WIDTH;
-    logic[DATA_WIDTH-1 : 0] mem[DEPTH];
+    logic[DATA_WIDTH-1 : 0] mem[DEPTH-1 : 0];
 
     always_ff @(posedge w_clk) begin
         if(w_en && !full) begin
