@@ -10,7 +10,7 @@ module async_fifo #(
     output wire full,
 
     // Read Domain
-    output reg[DATA_WIDTH - 1 : 0] data_out,
+    output logic[DATA_WIDTH - 1 : 0] data_out,
     input wire  r_en,
     input wire  r_clk,
     input wire  r_rst,
