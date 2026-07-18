@@ -17,9 +17,7 @@ module fifo_wptr #(
     - Generates the write address for memory access and updates the write pointer on successful write operations.
     */
 
-    logic[ADDR_WIDTH : 0] w_bin;
-    logic[ADDR_WIDTH : 0] wbin_nxt;
-    logic[ADDR_WIDTH : 0] wgray_nxt;
+    logic[ADDR_WIDTH : 0] w_bin,  wbin_nxt,  wgray_nxt;
 
     wire is_full;
 
