@@ -32,8 +32,23 @@ module async_fifo #(
     logic [ADDR_WIDTH:0]   wptr, rptr;
     logic [ADDR_WIDTH:0]   wq2_rptr, rq2_wptr;
 
-    fifo_sync #(.WIDTH(ADDR_WIDTH + 1)) sync_r2w (.clk(w_clk), .rst(w_rst), .d(rptr), .q(wq2_rptr));
-    fifo_sync #(.WIDTH(ADDR_WIDTH + 1)) sync_w2r (.clk(r_clk), .rst(r_rst), .d(wptr), .q(rq2_wptr));
+    fifo_sync #(
+        .WIDTH(ADDR_WIDTH + 1)
+    ) sync_r2w (
+        .clk(w_clk),
+        .rst(w_rst),
+        .d(rptr),
+        .q(wq2_rptr)
+    );
+    
+    fifo_sync #(
+        .WIDTH(ADDR_WIDTH + 1)
+    ) sync_w2r (
+        .clk(r_clk), 
+        .rst(r_rst),
+        .d(wptr), 
+        .q(rq2_wptr)
+    );
 
     fifo_mem #(
         .DATA_WIDTH(DATA_WIDTH),
