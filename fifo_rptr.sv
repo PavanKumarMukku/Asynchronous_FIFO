@@ -16,9 +16,7 @@ module fifo_rptr #(
     - Empty flag is generated when Gray-coded read pointer matches synchronized write pointer
     - Generates the read address for memory accessa and updates the read pointer on successful read operations.
     */
-    logic[ADDR_WIDTH : 0] r_bin;
-    wire [ADDR_WIDTH : 0] rbin_nxt;
-    wire [ADDR_WIDTH : 0] rgray_nxt;
+    logic[ADDR_WIDTH : 0] r_bin, rbin_nxt, rgray_nxt;
 
     wire is_empty;
 
