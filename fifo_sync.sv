@@ -22,8 +22,8 @@ module fifo_sync #(
 
     always_ff @(posedge clk or posedge rst) begin
         if(rst) begin
-            q1 <= 1'b0;
-            q <= 1'b0;
+            q1 <= '0;
+            q <= '0;
         end
         else begin
             q1 <= d;
