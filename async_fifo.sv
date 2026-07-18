@@ -25,6 +25,8 @@ module async_fifo #(
         - Write pointer Handler
         - Read Pointer Handler
         - Synchronizer
+        
+    Widths of write pointer ans read pointer is one more than the normal address width to distingush whether the fifo is empty or full
     */
     
     // Internal routing nets
