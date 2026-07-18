@@ -23,8 +23,8 @@ module fifo_wptr #(
 
     always_ff @(posedge w_clk or posedge w_rst) begin
         if(w_rst) begin
-            w_bin <= 0;
-            wptr  <= 0;
+            w_bin <= '0;
+            wptr  <= '0;
         end
         else begin
             w_bin <= wbin_nxt;
